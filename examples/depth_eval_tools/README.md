@@ -41,7 +41,7 @@
 
    * Based on the number of view specified (-nv), this tool will pause after each capture to allow the user to move the device to the next position.
 
-   * This tool is a good aid for collecting images for use with the Calibration and Registration tools. 
+   * This tool is a good aid for collecting images for use with the Calibration and Registration tools.  
 
    * Minimum example command: ```./collect  -mode=3 -res=1 -nv=2 -nc=10 -cal=1 -out=c:/data```
 
@@ -85,7 +85,7 @@
 ---
 ## Using the `depth_eval` Tool to Evaluate Depth Bias
 
-   * This tool is used to evaluate the depth bias of a device. 
+   * This tool is used to evaluate the depth bias of a device.  
 
    * This tool requires two MKV files as input, one captured using PASSIVE_IR and the other using WFOV_2X2BINNED. These two files should be collected with the camera and target board setup unchanged.
 
@@ -95,9 +95,9 @@
 
    * This tool will evaluate the depth bias of the device and output the results to the console.
 
-   * The output consists of four values. Total charuco corners as specified by the charuco dictionary, the actual number of detected corners (Depends on image quality, the higher the better), the Mean Z depth bias in millimeters, and the RMS Z depth bias in millimeters. 
+   * The output consists of four values. Total charuco corners as specified by the charuco dictionary, the actual number of detected corners (Depends on image quality, the higher the better), the Mean Z depth bias in millimeters, and the RMS Z depth bias in millimeters.  
 
-   * Depth bias is the difference between the ground truth depth measurement (determined by the projection of the target board) and the measured depth from the sensor. 
+   * Depth bias is the difference between the ground truth depth measurement (determined by the projection of the target board) and the measured depth from the sensor.  
 
    * Example Output:
 
@@ -108,7 +108,7 @@
    RMS of Z depth bias = 3.47157 mm
    ```
 
-   * The maximum bias should be expected to be within +/- 11mm. A depth bias outside of this range indicates a poor device calibration and the example Calibration tool should be used to obtain an improved calibration that can be stored (external of the device) and used in place of the factory calibration (Note: The factory calibration stored on the Kinect device can not be overwritten). 
+   * The maximum bias should be expected to be within +/- 11mm. A depth bias outside of this range indicates a poor device calibration and the example Calibration tool should be used to obtain an improved calibration that can be stored (external of the device) and used in place of the factory calibration (Note: The factory calibration stored on the Kinect device can not be overwritten).  
 
    * Minimum example command: ```./depth_eval -i=board1.mkv -d=board2.mkv -t=plane.json -out=c:/data```
 
@@ -185,9 +185,9 @@
 
    Install OpenCV manually using the following steps.  
 
-   [General Instalation Toutorial](https://docs.opencv.org/4.5.0/d0/d3d/tutorial_general_install.html)
+   [General Installation Tutorial](https://docs.opencv.org/4.5.0/d0/d3d/tutorial_general_install.html)
 
-   [OpenCV configuration options](https://docs.opencv.org/master/db/d05/tutorial_config_reference.html)
+   [OpenCV Configuration Options](https://docs.opencv.org/master/db/d05/tutorial_config_reference.html)
 
    1. Start an instance of "x64 Native Tools Command Prompt for VS 2019"  
 
@@ -205,7 +205,7 @@
 
    4. Install Release Version
 
-      ```c:\opencv\build> cd ..``` 
+      ```c:\opencv\build> cd ..```  
 
       ```c:\opencv> cmake --build c:/opencv/build --target install```
 
