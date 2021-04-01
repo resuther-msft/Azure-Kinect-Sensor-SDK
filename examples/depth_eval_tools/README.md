@@ -175,7 +175,7 @@
 ---
 ## OpenCV Dependency 
 
-   These example tools require both OpenCV and OpenCV Contrib to be installed prior to building the SDK.  
+   These example tools require both OpenCV and OpenCV Contrib to be installed prior to building the SDK. After installing OpenCV Contrib, the lib path in ```cmake/FindOpenCV.cmake``` will need to change from ```C:/opencv/build/x64/vc14/lib``` to ```C:/opencv/build/x64/vc16/lib```
 
    To build opencv and opencv_contrib from source run the following script (requires git) in an instance of "x64 Native Tools Command Prompt for VS 2019": ```scripts/install-opencv-contrib-4.5.0.bat```
 
