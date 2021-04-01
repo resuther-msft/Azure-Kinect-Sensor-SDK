@@ -15,7 +15,8 @@ git -C opencv_contrib checkout %cv_version%
 echo Building OpenCV Release Version
 
 cd opencv
-mkdir build && cd build
+mkdir build
+cd build
 
 cmake .. -GNinja -DOPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules -DBUILD_opencv_world=ON -DCMAKE_BUILD_TYPE=Release -DBUILD_PERF_TESTS:BOOL=OFF -DBUILD_TESTS:BOOL=OFF -DCMAKE_INSTALL_PREFIX=c:/opencv/build
 
