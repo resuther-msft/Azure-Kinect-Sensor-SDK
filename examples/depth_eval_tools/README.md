@@ -177,7 +177,7 @@
 
    These example tools require both OpenCV and OpenCV Contrib to be installed prior to building the SDK.  
 
-   To build opencv and opencv_contrib from source run the following script (requires git) in an instance of "x64 Native Tools Command Prompt for VS 2019": ```scripts/install-opencv-contrib-4.5.0.ps1```
+   To build opencv and opencv_contrib from source run the following script (requires git) in an instance of "x64 Native Tools Command Prompt for VS 2019": ```scripts/install-opencv-contrib-4.5.0.bat```
 
    If a prior version of OpenCV exists in ```C:\opencv```, remove it before running the script.
 
