@@ -175,15 +175,21 @@
 ---
 ## OpenCV Dependency 
 
-   These example tools require both OpenCV and OpenCV Contrib to be installed. 
+   These example tools require both OpenCV and OpenCV Contrib to be installed prior to building the SDK.  
 
-   To build opencv and opencv_contrib from source follow these steps:
+   To build opencv and opencv_contrib from source run the following script (requires git) in an instance of "x64 Native Tools Command Prompt for VS 2019": ```scripts/install-opencv-contrib-4.5.0.ps1```
+
+   If a prior version of OpenCV exists in ```C:\opencv```, remove it before running the script.
+
+   -OR-  
+
+   Install OpenCV manually using the following steps.  
 
    [General Instalation Toutorial](https://docs.opencv.org/4.5.0/d0/d3d/tutorial_general_install.html)
 
    [OpenCV configuration options](https://docs.opencv.org/master/db/d05/tutorial_config_reference.html)
 
-   1. Start an instance of "x64 Native Tools Command Prompt for VS 2019" 
+   1. Start an instance of "x64 Native Tools Command Prompt for VS 2019"  
 
    2. Clone opencv and opencv_contrib:
 
@@ -199,28 +205,28 @@
 
    4. Install Release Version
 
-      ```c:\opencv\build> cd ..```
-      
+      ```c:\opencv\build> cd ..``` 
+
       ```c:\opencv> cmake --build c:/opencv/build --target install```
 
-   5. Build Debug Version
+   5. Build Debug Version (optional)
 
       ```c:>mkdir build_debug && cd build_debug```
 
-      ```c:\opencv\build_debug>cmake .. -GNinja -DOPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules -DBUILD_opencv_world=ON -DCMAKE_BUILD_TYPE=Debug -DBUILD_PERF_TESTS:BOOL=OFF -DBUILD_TESTS:BOOL=OFF -DCMAKE_INSTALL_PREFIX=c:/opencv/build```
+      ```c:\opencv\build_debug>cmake .. -GNinja -DOPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules -DBUILD_opencv_world=ON -DCMAKE_BUILD_TYPE=Debug -DBUILD_PERF_TESTS:BOOL=OFF -DBUILD_TESTS:BOOL=OFF -DCMAKE_INSTALL_PREFIX=c:/opencv/build_debug```
 
-   6. Install Debug Version
+   6. Install Debug Version  (optional)
 
       ```c:\opencv\build_debug> cd ..```
 
       ```c:\opencv> cmake --build c:/opencv/build_debug --target install```
 
 
-   ***NOTE*** 
+   ***NOTE***  
 
    * The default install location for opencv is `c:\opencv\build\install\...`
    * However the Azure-Kinect-Sensor-SDK expects an install at `c:\opencv\build\...`
-   * To change the default install location add `-DCMAKE_INSTALL_PREFIX=<path_of_the_new_location>`
-   to the `cmake .. -GNinja` command 
+   * To change the default install location modify `-DCMAKE_INSTALL_PREFIX=<path_of_the_new_location>`
+   to the `cmake .. -GNinja` command  
 
    * The Azure Kinect Sensor SDK expects the OpenCV library files to be located at `c:\opencv\build\x64\vc15\lib`. The path of your installation may need to be modified to conform to this expectation.

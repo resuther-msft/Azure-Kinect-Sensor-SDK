@@ -1,7 +1,6 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 
-find_package(OpenCV REQUIRED)
 include_directories(
     .
 	../kahelpers/

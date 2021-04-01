@@ -24,7 +24,7 @@ function Download-ToTemp
     $path = Join-Path -Path $tempDir -ChildPath $filename
 
     Write-Host "Downloading $url to $path..."
-    Invoke-WebRequest -Uri $url -OutFile $path -UserAgent "NativeClient" -MaximumRetryCount 5 -RetryIntervalSec 60
+    Invoke-WebRequest -Uri $url -OutFile $path -UserAgent "NativeClient" -TimeoutSec 60
     Write-Host "Downloading Done"
 
     return $path
