@@ -26,11 +26,6 @@ cd ..
 
 cmake --build c:/opencv/build --target install
 
-echo Conforming Lib Path to Expected Location by SDK
-
-cd c:/opencv/build/x64/
-rename vc16 vc14
-
 echo DONE: Installing OpenCV Release Version
 
 cd %retdir%
